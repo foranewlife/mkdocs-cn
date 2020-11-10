@@ -8,7 +8,7 @@ MkDocs 英文文档：[https://www.mkdocs.org](https://www.mkdocs.org)
 
 MkDocs 中文文档：[https://mkdocs.writeup.top](https://mkdocs.writeup.top)
 
-MkDocs 项目地址：https://github.com/mkdocs/mkdocs
+MkDocs 项目地址：[https://github.com/mkdocs/mkdocs](https://github.com/mkdocs/mkdocs)
 
 
 

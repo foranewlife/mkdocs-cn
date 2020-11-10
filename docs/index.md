@@ -12,11 +12,13 @@ MkDocs 英文文档：[https://www.mkdocs.org](https://www.mkdocs.org)
 
 MkDocs 中文文档：[https://mkdocs.writeup.top](https://mkdocs.writeup.top)
 
+Mkdocs 项目地址：[https://github.com/mkdocs/mkdocs](https://github.com/mkdocs/mkdocs)
+
 ---
 
 ## 概述
 
-MkDocs 是一个 **快速**, **简单** 且 **非常华丽的** 一个静态网站生成器。因此它是非常适合用来构建项目文档。 项目文档使用 Markdown 进行书写，然后通过一个简单的 YAML 文件进行相关配置。 首先阅读下面的内容，然后查看用户使用指南来获取更多信息。
+MkDocs 是一个 **快速**，**简单** 且 **非常华丽的** 一个静态网站生成器。因此它是非常适合用来构建项目文档。 项目文档使用 Markdown 进行书写，然后通过一个简单的 YAML 文件进行相关配置。 首先阅读下面的内容，然后查看用户使用指南来获取更多信息。
 
 ### 在任意地方托管
 
