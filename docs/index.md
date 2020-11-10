@@ -76,31 +76,27 @@ MkoDocs 支持 Python 3.5，3.6，3.7，3.8版本和 pypy3。
 
 #### 安装 pip
 
-If you're using a recent version of Python, the Python package manager, [pip],
-is most likely installed by default. However, you may need to upgrade pip to the
-lasted version:
+如果你正在使用最新版的 Python，那么这个 Python 软件包管理器 [pip] 在默认情况下是很有可能已经安装了的。尽管如此，你可能仍需要更新 pip 到最新的版本：
 
 ```bash
 pip install --upgrade pip
 ```
 
-If you need to install [pip] for the first time, download [get-pip.py].
-Then run the following command to install it:
+如果你是第一次安装 [pip] 请下载 [get-pip.py] 然后执行如下命令进行安装：
 
 ```bash
 python get-pip.py
 ```
 
-#### Installing MkDocs
+#### 安装 MkDocs
 
-Install the `mkdocs` package using pip:
+使用 pip 安装 `mkdocs` 软件包:
 
 ```bash
 pip install mkdocs
 ```
 
-You should now have the `mkdocs` command installed on your system. Run `mkdocs
---version` to check that everything worked okay.
+现在你的系统上应该已经安装了 `mkdocs` 命令。执行 `mkdocs --version` 来检查是否一切正常。
 
 ```bash
 $ mkdocs --version
@@ -108,61 +104,47 @@ mkdocs, version 0.15.3
 ```
 
 !!! Note
-    If you would like manpages installed for MkDocs, the [click-man] tool can
-    generate and install them for you. Simply run the following two commands:
+    如果您希望为 MkDocs 安装手册，[click-man] 工具可以为你生成并安装它们。只需执行如下两行命令即可：
 
         pip install click-man
         click-man --target path/to/man/pages mkdocs
     
-    See the [click-man documentation] for an explanation of why manpages are
+    查看这个 [click-man documentation] 文档来了解为什么 pip 没有自动生成和安装这个手册。See the [click-man documentation] for an explanation of why manpages are
     not automatically generated and installed by pip.
 
 [click-man]: https://github.com/click-contrib/click-man
 [click-man documentation]: https://github.com/click-contrib/click-man#automatic-man-page-installation-with-setuptools-and-pip
 
 !!! Note
-    If you are using Windows, some of the above commands may not work
-    out-of-the-box.
+    如果你正在使用 Windows，上面的一些命令可能无法立即使用。
 
-    A quick solution may be to preface every Python command with `python -m`
-    like this:
+    一个快速的解决办法是在每个 python 命令前加上 `python -m` 像这样：
     
         python -m pip install mkdocs
         python -m mkdocs
     
-    For a more permanent solution, you may need to edit your `PATH` environment
-    variable to include the `Scripts` directory of your Python installation.
-    Recent versions of Python include a script to do this for you. Navigate to
-    your Python installation directory (for example `C:\Python38\`), open the
-    `Tools`, then `Scripts` folder, and run the `win_add2path.py` file by double
-    clicking on it. Alternatively, you can [download][a2p] the script and run it
-    (`python win_add2path.py`).
+    要获得更永久的解决方案，你可能需要将 Python 的 `Scripts` 目录添加到 `PATH` 环境变量中。最新版的 Python 已经为你准备了一个小脚本工具。打开你的 Python 安装目录（例如 `C:\python38\`），打开 `Tools` 文件夹，然后打开 `Scripts` 文件夹，最后通过双击执行 `win_add2path.py` 来自动添加环境变量。或者你可以[下载][a2p]这个脚本然后执行它（`python win_add2path.py`）。
 
 [a2p]: https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py
 
 ---
 
-## Getting Started
+## 开始
 
-Getting started is super easy.
+开始入门是非常容易的。
 
 ```bash
 mkdocs new my-project
 cd my-project
 ```
 
-Take a moment to review the initial project that has been created for you.
+花点时间查看一下为你创建的初始项目。
 
 ![The initial MkDocs layout](img/initial-layout.png)
 
-There's a single configuration file named `mkdocs.yml`, and a folder named
-`docs` that will contain your documentation source files. Right now the `docs`
-folder just contains a single documentation page, named `index.md`.
+那只有一个单独的 `mkdocs.yml` 配置文件和一个包含了你的源文件的 `docs` 文件夹。现在这个 `docs` 文件夹只包含一个 `index.md` 的文档页面。
 
-MkDocs comes with a built-in dev-server that lets you preview your documentation
-as you work on it. Make sure you're in the same directory as the `mkdocs.yml`
-configuration file, and then start the server by running the `mkdocs serve`
-command:
+MkDocs 带有内置的开发服务器，可让您在处理文档时预览文档。确保你和 `mkdocs.yml` 配置文件处于同一目录，然后通过执行 `mkdocs serve` 命令来启动这个服务：
 
 ```bash
 $ mkdocs serve
@@ -173,34 +155,27 @@ INFO    -  Cleaning site directory
 [I 160402 15:50:43 handlers:60] Start detecting changes
 ```
 
-Open up `http://127.0.0.1:8000/` in your browser, and you'll see the default
-home page being displayed:
+在你的浏览器打开 `http://127.0.0.1/80000/`，然后你就能看到这个默认的主页：
 
 ![The MkDocs live server](img/screenshot.png)
 
-The dev-server also supports auto-reloading, and will rebuild your documentation
-whenever anything in the configuration file, documentation directory, or theme
-directory changes.
+内置的开发服务器还支持自动重载，并且只要配置文件，文档目录或主题目录中的任何文件发生改变，它都将自动重新生成站点内容。
 
-Open the `docs/index.md` document in your text editor of choice, change the
-initial heading to `MkLorum`, and save your changes. Your browser will
-auto-reload and you should see your updated documentation immediately.
+用你的 txt 编辑器打开这个 `docs/index.md` 文档，将这个初始的默认标题改为 `MkLorum`，然后进行保存。你的浏览器将自动重新加载，你应该能够立刻看到更新后的文档。
 
-Now try editing the configuration file: `mkdocs.yml`. Change the
-[`site_name`][site_name] setting to `MkLorum` and save the file.
+仙子啊试着编辑这个配置文件：`mkdocs.yml`。将这个 [`site_name`][site_name] 设置项修改为 `MkLorum` 然后保存文件。
 
 ```yaml
 site_name: MkLorum
 ```
 
-Your browser should immediately reload, and you'll see your new site name take
-effect.
+你的浏览器应该会立即自动重新加载，然后你将看到你的新的站点名字已经生效了。
 
 ![The site_name setting](img/site-name.png)
 
-## Adding pages
+## 添加页面
 
-Now add a second page to your documentation:
+现在在文档中添加第二个页面：
 
 ```bash
 curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
