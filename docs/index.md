@@ -40,9 +40,8 @@ MkDocs 提供了非常多的漂亮[主题][themes]。可以在内置主题 [mkdo
 
 如果你拥有并软件包管理器（比如 [apt-get]，[dnf]，[homebrew]，[yum]，[chocolatey] 等等）在你的系统上安装软件包。那么你应该去搜索一个名叫 "MkDocs" 的软件包，如果存在最新的版本是可用的，那么用你的软件包管理器（详细信息请查看你的系统文档）来安装它。就是这样，你已经完成了！你可以直接跳到[开始页面](#开始)。
 
-If your package manager does not have a recent "MkDocs" package, you can still
-use your package manager to install "Python" and "pip". Then you can use pip to
-[install MkDocs](#installing-mkdocs).
+如果你的软件包管理器没有最近的 "MkDocs" 软件包，你仍然可以使用你的软件包管理器来安装 "Python" 和 "pip"。然后你就可以使用 pip 来[安装 MkDocs](#安装)。
+
 
 [apt-get]: https://help.ubuntu.com/community/AptGet/Howto
 [homebrew]: https://brew.sh/
@@ -50,11 +49,9 @@ use your package manager to install "Python" and "pip". Then you can use pip to
 [yum]: http://yum.baseurl.org/
 [chocolatey]: https://chocolatey.org/
 
-### Manual Installation
+### 手动安装
 
-In order to manually install MkDocs you'll need [Python] installed on your
-system, as well as the Python package manager, [pip]. You can check if you have
-these already installed from the command line:
+为了手动安装 MkDocs 你需要在你的系统上安装好 [Python] 以及 Python 包管理器 pip。你可以从命令行检查是否已经安装了它们：
 
 ```bash
 $ python --version
@@ -63,24 +60,21 @@ $ pip --version
 pip 20.0.2 from /usr/local/lib/python3.8/site-packages/pip (python 3.8)
 ```
 
-MkDocs supports Python versions 3.5, 3.6, 3.7, 3.8, and pypy3.
+MkoDocs 支持 Python 3.5，3.6，3.7，3.8版本和 pypy3。
 
-#### Installing Python
+#### 安装 Python
 
-Install [Python] by downloading an installer appropriate for your system from
-[python.org] and running it.
+通过从 [python.org] 下载一个适合你系统的安装程序并且运行它进行安装。
 
 !!! Note
 
-    If you are installing Python on Windows, be sure to check the box to have
-    Python added to your PATH if the installer offers such an option (it's
-    normally off by default).
+    如果你是在 Windows 上安装 Python，在安装程序提供了如下选项的情况下（默认情况下它是关闭的），请确保你选中该复选框以便将 Python 添加进环境变量。
     
     ![Add Python to PATH](img/win-py-install.png)
 
 [python.org]: https://www.python.org/downloads/
 
-#### Installing pip
+#### 安装 pip
 
 If you're using a recent version of Python, the Python package manager, [pip],
 is most likely installed by default. However, you may need to upgrade pip to the
