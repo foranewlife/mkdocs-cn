@@ -4,11 +4,11 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Project documentation with Markdown.">
+        <meta name="description" content="MkDocs 中文文档开源翻译项目">
         <meta name="author" content="MkDocs Team">
-        <link rel="canonical" href="https://www.mkdocs.org/">
+        <link rel="canonical" href="https://mkdocs.writeup.top/">
         <link rel="shortcut icon" href="img/favicon.ico">
-        <title>MkDocs</title>
+        <title>MkDocs 中文文档</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/font-awesome.min.css" rel="stylesheet">
         <link href="css/base.css" rel="stylesheet">
@@ -35,7 +35,7 @@
     <body class="homepage">
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">MkDocs</a>
+                <a class="navbar-brand" href=".">MkDocs 中文文档</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -113,7 +113,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/mkdocs/mkdocs/" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                                <a href="https://github.com/Writeup007/mkdocs-cn" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -148,11 +148,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#getting-started" class="nav-link">Getting Started</a>
+            <li class="nav-item" data-level="2"><a href="#_10" class="nav-link">开始</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#adding-pages" class="nav-link">Adding pages</a>
+            <li class="nav-item" data-level="2"><a href="#_11" class="nav-link">添加页面</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -225,66 +225,48 @@ pip 20.0.2 from /usr/local/lib/python3.8/site-packages/pip (python 3.8)
 <p><img alt="Add Python to PATH" src="img/win-py-install.png" /></p>
 </div>
 <h4 id="pip">安装 pip<a class="headerlink" href="#pip" title="Permanent link"></a></h4>
-<p>If you're using a recent version of Python, the Python package manager, <a href="https://pip.readthedocs.io/en/stable/installing/">pip</a>,
-is most likely installed by default. However, you may need to upgrade pip to the
-lasted version:</p>
+<p>如果你正在使用最新版的 Python，那么这个 Python 软件包管理器 <a href="https://pip.readthedocs.io/en/stable/installing/">pip</a> 在默认情况下是很有可能已经安装了的。尽管如此，你可能仍需要更新 pip 到最新的版本：</p>
 <pre><code class="language-bash">pip install --upgrade pip
 </code></pre>
-<p>If you need to install <a href="https://pip.readthedocs.io/en/stable/installing/">pip</a> for the first time, download <a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a>.
-Then run the following command to install it:</p>
+<p>如果你是第一次安装 <a href="https://pip.readthedocs.io/en/stable/installing/">pip</a> 请下载 <a href="https://bootstrap.pypa.io/get-pip.py">get-pip.py</a> 然后执行如下命令进行安装：</p>
 <pre><code class="language-bash">python get-pip.py
 </code></pre>
-<h4 id="installing-mkdocs">Installing MkDocs<a class="headerlink" href="#installing-mkdocs" title="Permanent link"></a></h4>
-<p>Install the <code>mkdocs</code> package using pip:</p>
+<h4 id="mkdocs_1">安装 MkDocs<a class="headerlink" href="#mkdocs_1" title="Permanent link"></a></h4>
+<p>使用 pip 安装 <code>mkdocs</code> 软件包:</p>
 <pre><code class="language-bash">pip install mkdocs
 </code></pre>
-<p>You should now have the <code>mkdocs</code> command installed on your system. Run <code>mkdocs
---version</code> to check that everything worked okay.</p>
+<p>现在你的系统上应该已经安装了 <code>mkdocs</code> 命令。执行 <code>mkdocs --version</code> 来检查是否一切正常。</p>
 <pre><code class="language-bash">$ mkdocs --version
 mkdocs, version 0.15.3
 </code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you would like manpages installed for MkDocs, the <a href="https://github.com/click-contrib/click-man">click-man</a> tool can
-generate and install them for you. Simply run the following two commands:</p>
+<p>如果您希望为 MkDocs 安装手册，<a href="https://github.com/click-contrib/click-man">click-man</a> 工具可以为你生成并安装它们。只需执行如下两行命令即可：</p>
 <pre><code>pip install click-man
 click-man --target path/to/man/pages mkdocs
 </code></pre>
-<p>See the <a href="https://github.com/click-contrib/click-man#automatic-man-page-installation-with-setuptools-and-pip">click-man documentation</a> for an explanation of why manpages are
+<p>查看这个 <a href="https://github.com/click-contrib/click-man#automatic-man-page-installation-with-setuptools-and-pip">click-man documentation</a> 文档来了解为什么 pip 没有自动生成和安装这个手册。See the <a href="https://github.com/click-contrib/click-man#automatic-man-page-installation-with-setuptools-and-pip">click-man documentation</a> for an explanation of why manpages are
 not automatically generated and installed by pip.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you are using Windows, some of the above commands may not work
-out-of-the-box.</p>
-<p>A quick solution may be to preface every Python command with <code>python -m</code>
-like this:</p>
+<p>如果你正在使用 Windows，上面的一些命令可能无法立即使用。</p>
+<p>一个快速的解决办法是在每个 python 命令前加上 <code>python -m</code> 像这样：</p>
 <pre><code>python -m pip install mkdocs
 python -m mkdocs
 </code></pre>
-<p>For a more permanent solution, you may need to edit your <code>PATH</code> environment
-variable to include the <code>Scripts</code> directory of your Python installation.
-Recent versions of Python include a script to do this for you. Navigate to
-your Python installation directory (for example <code>C:\Python38\</code>), open the
-<code>Tools</code>, then <code>Scripts</code> folder, and run the <code>win_add2path.py</code> file by double
-clicking on it. Alternatively, you can <a href="https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py">download</a> the script and run it
-(<code>python win_add2path.py</code>).</p>
+<p>要获得更永久的解决方案，你可能需要将 Python 的 <code>Scripts</code> 目录添加到 <code>PATH</code> 环境变量中。最新版的 Python 已经为你准备了一个小脚本工具。打开你的 Python 安装目录（例如 <code>C:\python38\</code>），打开 <code>Tools</code> 文件夹，然后打开 <code>Scripts</code> 文件夹，最后通过双击执行 <code>win_add2path.py</code> 来自动添加环境变量。或者你可以<a href="https://svn.python.org/projects/python/trunk/Tools/scripts/win_add2path.py">下载</a>这个脚本然后执行它（<code>python win_add2path.py</code>）。</p>
 </div>
 <hr />
-<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link"></a></h2>
-<p>Getting started is super easy.</p>
+<h2 id="_10">开始<a class="headerlink" href="#_10" title="Permanent link"></a></h2>
+<p>开始入门是非常容易的。</p>
 <pre><code class="language-bash">mkdocs new my-project
 cd my-project
 </code></pre>
-<p>Take a moment to review the initial project that has been created for you.</p>
+<p>花点时间查看一下为你创建的初始项目。</p>
 <p><img alt="The initial MkDocs layout" src="img/initial-layout.png" /></p>
-<p>There's a single configuration file named <code>mkdocs.yml</code>, and a folder named
-<code>docs</code> that will contain your documentation source files. Right now the <code>docs</code>
-folder just contains a single documentation page, named <code>index.md</code>.</p>
-<p>MkDocs comes with a built-in dev-server that lets you preview your documentation
-as you work on it. Make sure you're in the same directory as the <code>mkdocs.yml</code>
-configuration file, and then start the server by running the <code>mkdocs serve</code>
-command:</p>
+<p>那只有一个单独的 <code>mkdocs.yml</code> 配置文件和一个包含了你的源文件的 <code>docs</code> 文件夹。现在这个 <code>docs</code> 文件夹只包含一个 <code>index.md</code> 的文档页面。</p>
+<p>MkDocs 带有内置的开发服务器，可让您在处理文档时预览文档。确保你和 <code>mkdocs.yml</code> 配置文件处于同一目录，然后通过执行 <code>mkdocs serve</code> 命令来启动这个服务：</p>
 <pre><code class="language-bash">$ mkdocs serve
 INFO    -  Building documentation...
 INFO    -  Cleaning site directory
@@ -292,24 +274,17 @@ INFO    -  Cleaning site directory
 [I 160402 15:50:43 handlers:58] Start watching changes
 [I 160402 15:50:43 handlers:60] Start detecting changes
 </code></pre>
-<p>Open up <code>http://127.0.0.1:8000/</code> in your browser, and you'll see the default
-home page being displayed:</p>
+<p>在你的浏览器打开 <code>http://127.0.0.1/80000/</code>，然后你就能看到这个默认的主页：</p>
 <p><img alt="The MkDocs live server" src="img/screenshot.png" /></p>
-<p>The dev-server also supports auto-reloading, and will rebuild your documentation
-whenever anything in the configuration file, documentation directory, or theme
-directory changes.</p>
-<p>Open the <code>docs/index.md</code> document in your text editor of choice, change the
-initial heading to <code>MkLorum</code>, and save your changes. Your browser will
-auto-reload and you should see your updated documentation immediately.</p>
-<p>Now try editing the configuration file: <code>mkdocs.yml</code>. Change the
-<a href="user-guide/configuration/#site_name"><code>site_name</code></a> setting to <code>MkLorum</code> and save the file.</p>
+<p>内置的开发服务器还支持自动重载，并且只要配置文件，文档目录或主题目录中的任何文件发生改变，它都将自动重新生成站点内容。</p>
+<p>用你的 txt 编辑器打开这个 <code>docs/index.md</code> 文档，将这个初始的默认标题改为 <code>MkLorum</code>，然后进行保存。你的浏览器将自动重新加载，你应该能够立刻看到更新后的文档。</p>
+<p>仙子啊试着编辑这个配置文件：<code>mkdocs.yml</code>。将这个 <a href="user-guide/configuration/#site_name"><code>site_name</code></a> 设置项修改为 <code>MkLorum</code> 然后保存文件。</p>
 <pre><code class="language-yaml">site_name: MkLorum
 </code></pre>
-<p>Your browser should immediately reload, and you'll see your new site name take
-effect.</p>
+<p>你的浏览器应该会立即自动重新加载，然后你将看到你的新的站点名字已经生效了。</p>
 <p><img alt="The site_name setting" src="img/site-name.png" /></p>
-<h2 id="adding-pages">Adding pages<a class="headerlink" href="#adding-pages" title="Permanent link"></a></h2>
-<p>Now add a second page to your documentation:</p>
+<h2 id="_11">添加页面<a class="headerlink" href="#_11" title="Permanent link"></a></h2>
+<p>现在在文档中添加第二个页面：</p>
 <pre><code class="language-bash">curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
 </code></pre>
 <p>As our documentation site will include some navigation headers, you may want to
@@ -478,5 +453,5 @@ the MkDocs IRC channel <code>#mkdocs</code> on freenode.</p></div>
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-11-10 11:53:34.604953+00:00
+Build Date UTC : 2020-11-10 14:12:42.896712+00:00
 -->
