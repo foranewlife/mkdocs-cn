@@ -185,10 +185,7 @@ site_name: MkLorum
 curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' > docs/about.md
 ```
 
-As our documentation site will include some navigation headers, you may want to
-edit the configuration file and add some information about the order, title, and
-nesting of each page in the navigation header by adding a [`nav`][nav]
-setting:
+如果你想在我们的文档网站上添加一些导航标题，你可能需要编辑配置文件，然后通过添加[`导航`][nav]设置在导航标题中添加有关每个页面的顺序，标题和嵌套的一些信息：
 
 ```yaml
 site_name: MkLorum
@@ -197,25 +194,19 @@ nav:
     - About: about.md
 ```
 
-Save your changes and you'll now see a navigation bar with `Home` and `About`
-items on the left as well as `Search`, `Previous`, and `Next` items on the
-right.
+保存所做的修改，然后你就能看到一个导航栏，左侧带有 `Home` 和 `About` 标签，右侧带有 `search` ，`Previous` 和 `Next` 标签。
 
 ![Screenshot](img/multipage.png)
 
-Try the menu items and navigate back and forth between pages. Then click on
-`Search`. A search dialog will appear, allowing you to search for any text on
-any page. Notice that the search results include every occurrence of the search
-term on the site and links directly to the section of the page in which the
-search term appears. You get all of that with no effort or configuration on your
-part!
+
+
+尝试菜单项并在页面之间来回导航。 然后点击 `Search`，将出现一个搜索对话框，使您可以搜索任何页面上的任何文本。 请注意，搜索结果包括网站上搜索关键词的每一次出现，并直接链接到搜索词出现的页面部分。 您可以毫不费力地完成所有工作！
 
 ![Screenshot](img/search.png)
 
-## Theming our documentation
+## 为我们的文档添加主题
 
-Now change the configuration file to alter how the documentation is displayed by
-changing the theme. Edit the `mkdocs.yml` file and add a [`theme`][theme] setting:
+现在我们通过更改配置文件的方式来更改主题，以此来改变文档的显示方式。编辑 `mkdocs.yml` 文件，然后新增一个 [`theme`][主题] 设置选项：
 
 ```yaml
 site_name: MkLorum
@@ -225,16 +216,13 @@ nav:
 theme: readthedocs
 ```
 
-Save your changes, and you'll see the ReadTheDocs theme being used.
+保存所做的修改，然后你将会看到已经正在使用 ReadTheDocs 主题了。
 
 ![Screenshot](img/readthedocs.png)
 
-## Changing the Favicon Icon
+## 修改 Favicon 图标
 
-By default, MkDocs uses the [MkDocs favicon] icon. To use a different icon, create
-an `img` subdirectory in your `docs_dir` and copy your custom `favicon.ico` file
-to that directory. MkDocs will automatically detect and use that file as your
-favicon icon.
+默认情况下，MkDocs 使用 [MkDocs favicon] 图标。想要使用不同的图标，请在你的 `doc_dir` 目录下创建一个 `img` 文件夹，然后复制你自定义的 `favicon.ico` 文件到该目录。MkDocs 将会自动检测然后使用该文件作为你的 favicon 图标。
 
 [MkDocs favicon]: /img/favicon.ico
 

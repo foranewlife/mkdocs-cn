@@ -155,11 +155,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#theming-our-documentation" class="nav-link">Theming our documentation</a>
+            <li class="nav-item" data-level="2"><a href="#_12" class="nav-link">为我们的文档添加主题</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#changing-the-favicon-icon" class="nav-link">Changing the Favicon Icon</a>
+            <li class="nav-item" data-level="2"><a href="#favicon" class="nav-link">修改 Favicon 图标</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -288,42 +288,28 @@ INFO    -  Cleaning site directory
 <p>现在在文档中添加第二个页面：</p>
 <pre><code class="language-bash">curl 'https://jaspervdj.be/lorem-markdownum/markdown.txt' &gt; docs/about.md
 </code></pre>
-<p>As our documentation site will include some navigation headers, you may want to
-edit the configuration file and add some information about the order, title, and
-nesting of each page in the navigation header by adding a <a href="user-guide/configuration/#nav"><code>nav</code></a>
-setting:</p>
+<p>如果你想在我们的文档网站上添加一些导航标题，你可能需要编辑配置文件，然后通过添加<a href="user-guide/configuration/#nav"><code>导航</code></a>设置在导航标题中添加有关每个页面的顺序，标题和嵌套的一些信息：</p>
 <pre><code class="language-yaml">site_name: MkLorum
 nav:
     - Home: index.md
     - About: about.md
 </code></pre>
-<p>Save your changes and you'll now see a navigation bar with <code>Home</code> and <code>About</code>
-items on the left as well as <code>Search</code>, <code>Previous</code>, and <code>Next</code> items on the
-right.</p>
+<p>保存所做的修改，然后你就能看到一个导航栏，左侧带有 <code>Home</code> 和 <code>About</code> 标签，右侧带有 <code>search</code> ，<code>Previous</code> 和 <code>Next</code> 标签。</p>
 <p><img alt="Screenshot" src="img/multipage.png" /></p>
-<p>Try the menu items and navigate back and forth between pages. Then click on
-<code>Search</code>. A search dialog will appear, allowing you to search for any text on
-any page. Notice that the search results include every occurrence of the search
-term on the site and links directly to the section of the page in which the
-search term appears. You get all of that with no effort or configuration on your
-part!</p>
+<p>尝试菜单项并在页面之间来回导航。 然后点击 <code>Search</code>，将出现一个搜索对话框，使您可以搜索任何页面上的任何文本。 请注意，搜索结果包括网站上搜索关键词的每一次出现，并直接链接到搜索词出现的页面部分。 您可以毫不费力地完成所有工作！</p>
 <p><img alt="Screenshot" src="img/search.png" /></p>
-<h2 id="theming-our-documentation">Theming our documentation<a class="headerlink" href="#theming-our-documentation" title="Permanent link"></a></h2>
-<p>Now change the configuration file to alter how the documentation is displayed by
-changing the theme. Edit the <code>mkdocs.yml</code> file and add a <a href="user-guide/configuration/#theme"><code>theme</code></a> setting:</p>
+<h2 id="_12">为我们的文档添加主题<a class="headerlink" href="#_12" title="Permanent link"></a></h2>
+<p>现在我们通过更改配置文件的方式来更改主题，以此来改变文档的显示方式。编辑 <code>mkdocs.yml</code> 文件，然后新增一个 [<code>theme</code>][主题] 设置选项：</p>
 <pre><code class="language-yaml">site_name: MkLorum
 nav:
     - Home: index.md
     - About: about.md
 theme: readthedocs
 </code></pre>
-<p>Save your changes, and you'll see the ReadTheDocs theme being used.</p>
+<p>保存所做的修改，然后你将会看到已经正在使用 ReadTheDocs 主题了。</p>
 <p><img alt="Screenshot" src="img/readthedocs.png" /></p>
-<h2 id="changing-the-favicon-icon">Changing the Favicon Icon<a class="headerlink" href="#changing-the-favicon-icon" title="Permanent link"></a></h2>
-<p>By default, MkDocs uses the <a href="/img/favicon.ico">MkDocs favicon</a> icon. To use a different icon, create
-an <code>img</code> subdirectory in your <code>docs_dir</code> and copy your custom <code>favicon.ico</code> file
-to that directory. MkDocs will automatically detect and use that file as your
-favicon icon.</p>
+<h2 id="favicon">修改 Favicon 图标<a class="headerlink" href="#favicon" title="Permanent link"></a></h2>
+<p>默认情况下，MkDocs 使用 <a href="/img/favicon.ico">MkDocs favicon</a> 图标。想要使用不同的图标，请在你的 <code>doc_dir</code> 目录下创建一个 <code>img</code> 文件夹，然后复制你自定义的 <code>favicon.ico</code> 文件到该目录。MkDocs 将会自动检测然后使用该文件作为你的 favicon 图标。</p>
 <h2 id="building-the-site">Building the site<a class="headerlink" href="#building-the-site" title="Permanent link"></a></h2>
 <p>That's looking good. You're ready to deploy the first pass of your <code>MkLorum</code>
 documentation. First build the documentation:</p>
@@ -454,5 +440,5 @@ the MkDocs IRC channel <code>#mkdocs</code> on freenode.</p></div>
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-11-10 14:37:40.590926+00:00
+Build Date UTC : 2020-11-11 15:14:55.487249+00:00
 -->
