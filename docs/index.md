@@ -226,17 +226,15 @@ theme: readthedocs
 
 [MkDocs favicon]: /img/favicon.ico
 
-## Building the site
+## 构建网站
 
-That's looking good. You're ready to deploy the first pass of your `MkLorum`
-documentation. First build the documentation:
+看起来一切顺利。你已经准备好了第一次部署你的 `MkLorum` 站点了。首先构建文档：
 
 ```bash
 mkdocs build
 ```
 
-This will create a new directory, named `site`. Take a look inside the
-directory:
+这将创建一个新的名为 `site` 的文件夹，看一下里面有什么：
 
 ```bash
 $ ls site
@@ -244,42 +242,31 @@ about  fonts  index.html  license  search.html
 css    img    js          mkdocs   sitemap.xml
 ```
 
-Notice that your source documentation has been output as two HTML files named
-`index.html` and `about/index.html`. You also have various other media that's
-been copied into the `site` directory as part of the documentation theme. You
-even have a `sitemap.xml` file and `mkdocs/search_index.json`.
+可以看到你的源文档已经被生成并输出为两个 HTML 文件了，分别是 `index.html` 和 `about/index.html`。还有其他各种媒体文件，它们也作为文档主题的一部分被复制到了 `site` 目录。你甚至拥有一个 `sitemap.xml` 和 `mkdocs/search_index.json` 文件。
 
-If you're using source code control such as `git` you probably don't want to
-check your documentation builds into the repository. Add a line containing
-`site/` to your `.gitignore` file.
+如果你使用的是 `git` 之类的源代码控制工具，你可能不想将你文档生成的站点上传到存储仓库上，只需要将 `site` 添加到你的 `.gitignore` 文件中即可。
 
 ```bash
 echo "site/" >> .gitignore
 ```
 
-If you're using another source code control tool you'll want to check its
-documentation on how to ignore specific directories.
+如果你使用的是其他的源代码控制工具，那么你可能需要去查看相关文档，了解怎样去忽略特定的目录。
 
-After some time, files may be removed from the documentation but they will still
-reside in the `site` directory. To remove those stale files, just run `mkdocs`
-with the `--clean` switch.
+过一会儿，文件可能会从文档中删除，但是它们将会仍将保留在 `site` 目录内。想要移除这些文件，只需要执行 `mkdocs` 命令并带上 `--clean` 参数即可。
 
 ```bash
 mkdocs build --clean
 ```
 
-## Other Commands and Options
+## 其他命令和选项
 
-There are various other commands and options available. For a complete list of
-commands, use the `--help` flag:
+还有其他的各种命令和选项可用，使用 `--help` 参数查看完整的命令列表：
 
 ```bash
 mkdocs --help
 ```
 
-To view a list of options available on a given command, use the `--help` flag
-with that command. For example, to get a list of all options available for the
-`build` command run the following:
+要查看给定命令的可用选项列表，请在该命令中使用 `--help` 参数。例如，要获取所有可用于 `build` 命令的选项列表，请执行以下命令：
 
 ```bash
 mkdocs build --help
