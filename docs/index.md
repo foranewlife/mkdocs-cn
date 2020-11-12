@@ -12,6 +12,8 @@ MkDocs 英文文档：[https://www.mkdocs.org](https://www.mkdocs.org)
 
 MkDocs 中文文档：[https://mkdocs.writeup.top](https://mkdocs.writeup.top)
 
+备用中文文档站点：[https://writeup007.github.io/mkdocs-cn](https://writeup007.github.io/mkdocs-cn)
+
 Mkdocs 项目地址：[https://github.com/mkdocs/mkdocs](https://github.com/mkdocs/mkdocs)
 
 ---
