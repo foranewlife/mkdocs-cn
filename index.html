@@ -163,11 +163,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#building-the-site" class="nav-link">Building the site</a>
+            <li class="nav-item" data-level="2"><a href="#_13" class="nav-link">构建网站</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#other-commands-and-options" class="nav-link">Other Commands and Options</a>
+            <li class="nav-item" data-level="2"><a href="#_14" class="nav-link">其他命令和选项</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -310,41 +310,28 @@ theme: readthedocs
 <p><img alt="Screenshot" src="img/readthedocs.png" /></p>
 <h2 id="favicon">修改 Favicon 图标<a class="headerlink" href="#favicon" title="Permanent link"></a></h2>
 <p>默认情况下，MkDocs 使用 <a href="/img/favicon.ico">MkDocs favicon</a> 图标。想要使用不同的图标，请在你的 <code>doc_dir</code> 目录下创建一个 <code>img</code> 文件夹，然后复制你自定义的 <code>favicon.ico</code> 文件到该目录。MkDocs 将会自动检测然后使用该文件作为你的 favicon 图标。</p>
-<h2 id="building-the-site">Building the site<a class="headerlink" href="#building-the-site" title="Permanent link"></a></h2>
-<p>That's looking good. You're ready to deploy the first pass of your <code>MkLorum</code>
-documentation. First build the documentation:</p>
+<h2 id="_13">构建网站<a class="headerlink" href="#_13" title="Permanent link"></a></h2>
+<p>看起来一切顺利。你已经准备好了第一次部署你的 <code>MkLorum</code> 站点了。首先构建文档：</p>
 <pre><code class="language-bash">mkdocs build
 </code></pre>
-<p>This will create a new directory, named <code>site</code>. Take a look inside the
-directory:</p>
+<p>这将创建一个新的名为 <code>site</code> 的文件夹，看一下里面有什么：</p>
 <pre><code class="language-bash">$ ls site
 about  fonts  index.html  license  search.html
 css    img    js          mkdocs   sitemap.xml
 </code></pre>
-<p>Notice that your source documentation has been output as two HTML files named
-<code>index.html</code> and <code>about/index.html</code>. You also have various other media that's
-been copied into the <code>site</code> directory as part of the documentation theme. You
-even have a <code>sitemap.xml</code> file and <code>mkdocs/search_index.json</code>.</p>
-<p>If you're using source code control such as <code>git</code> you probably don't want to
-check your documentation builds into the repository. Add a line containing
-<code>site/</code> to your <code>.gitignore</code> file.</p>
+<p>可以看到你的源文档已经被生成并输出为两个 HTML 文件了，分别是 <code>index.html</code> 和 <code>about/index.html</code>。还有其他各种媒体文件，它们也作为文档主题的一部分被复制到了 <code>site</code> 目录。你甚至拥有一个 <code>sitemap.xml</code> 和 <code>mkdocs/search_index.json</code> 文件。</p>
+<p>如果你使用的是 <code>git</code> 之类的源代码控制工具，你可能不想将你文档生成的站点上传到存储仓库上，只需要将 <code>site</code> 添加到你的 <code>.gitignore</code> 文件中即可。</p>
 <pre><code class="language-bash">echo &quot;site/&quot; &gt;&gt; .gitignore
 </code></pre>
-<p>If you're using another source code control tool you'll want to check its
-documentation on how to ignore specific directories.</p>
-<p>After some time, files may be removed from the documentation but they will still
-reside in the <code>site</code> directory. To remove those stale files, just run <code>mkdocs</code>
-with the <code>--clean</code> switch.</p>
+<p>如果你使用的是其他的源代码控制工具，那么你可能需要去查看相关文档，了解怎样去忽略特定的目录。</p>
+<p>过一会儿，文件可能会从文档中删除，但是它们将会仍将保留在 <code>site</code> 目录内。想要移除这些文件，只需要执行 <code>mkdocs</code> 命令并带上 <code>--clean</code> 参数即可。</p>
 <pre><code class="language-bash">mkdocs build --clean
 </code></pre>
-<h2 id="other-commands-and-options">Other Commands and Options<a class="headerlink" href="#other-commands-and-options" title="Permanent link"></a></h2>
-<p>There are various other commands and options available. For a complete list of
-commands, use the <code>--help</code> flag:</p>
+<h2 id="_14">其他命令和选项<a class="headerlink" href="#_14" title="Permanent link"></a></h2>
+<p>还有其他的各种命令和选项可用，使用 <code>--help</code> 参数查看完整的命令列表：</p>
 <pre><code class="language-bash">mkdocs --help
 </code></pre>
-<p>To view a list of options available on a given command, use the <code>--help</code> flag
-with that command. For example, to get a list of all options available for the
-<code>build</code> command run the following:</p>
+<p>要查看给定命令的可用选项列表，请在该命令中使用 <code>--help</code> 参数。例如，要获取所有可用于 <code>build</code> 命令的选项列表，请执行以下命令：</p>
 <pre><code class="language-bash">mkdocs build --help
 </code></pre>
 <h2 id="deploying">Deploying<a class="headerlink" href="#deploying" title="Permanent link"></a></h2>
@@ -440,5 +427,5 @@ the MkDocs IRC channel <code>#mkdocs</code> on freenode.</p></div>
 
 <!--
 MkDocs version : 1.1.2
-Build Date UTC : 2020-11-11 15:17:39.815450+00:00
+Build Date UTC : 2020-11-12 14:14:27.084124+00:00
 -->
