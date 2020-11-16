@@ -8,7 +8,7 @@
         <meta name="author" content="MkDocs Team">
         <link rel="canonical" href="https://mkdocs.writeup.top/user-guide/writing-your-docs/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
-        <title>Writing Your Docs - MkDocs 中文文档</title>
+        <title>编写文档 - MkDocs 中文文档</title>
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
@@ -49,11 +49,11 @@
                                 <a href="../.." class="nav-link">Home</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">用户指南 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
-    <a href="./" class="dropdown-item active">Writing Your Docs</a>
+    <a href="./" class="dropdown-item active">编写文档</a>
 </li>
                                     
 <li>
@@ -78,7 +78,7 @@
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">关于 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
 <li>
@@ -113,7 +113,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/Writeup007/mkdocs-cn" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                                <a href="https://github.com/Writeup007/mkdocs-cn/tree/main/docs/user-guide/writing-your-docs.md" class="nav-link"><i class="fa fa-github"></i> Edit on GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -133,7 +133,7 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#writing-your-docs" class="nav-link">Writing your docs</a>
+            <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">编写文档</a>
               <ul class="nav flex-column">
             <li class="nav-item" data-level="2"><a href="#file-layout" class="nav-link">File layout</a>
               <ul class="nav flex-column">
@@ -150,8 +150,8 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="writing-your-docs">Writing your docs<a class="headerlink" href="#writing-your-docs" title="Permanent link"></a></h1>
-<p>How to layout and write your Markdown source files.</p>
+<h1 id="_1">编写文档<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
+<p>如何布局和编写Markdown源文件。</p>
 <hr />
 <h2 id="file-layout">File layout<a class="headerlink" href="#file-layout" title="Permanent link"></a></h2>
 <p>Your documentation source should be written as regular Markdown files (see
@@ -533,23 +533,26 @@ line before and after the table.</p>
 blocks without indentation.</p>
 <p>The first line should contain 3 or more backtick (<code>`</code>) characters, and the
 last line should contain the same number of backtick characters (<code>`</code>):</p>
-<pre><code class="language-no-highlight">```
+<pre><code class="language-no-highlight">
+```
 Fenced code blocks are like Standard
 Markdown’s regular code blocks, except that
 they’re not indented and instead rely on
 start and end fence lines to delimit the
 code block.
 ```
+
 </code></pre>
 <p>With this approach, the language can optionally be specified on the first line
 after the backticks which informs any syntax highlighters of the language used:</p>
-<pre><code class="language-no-highlight">```python
+<pre><code class="language-no-highlight">​```python
 def fn():
     pass
 ```
 </code></pre>
 <p>Note that fenced code blocks can not be indented. Therefore, they cannot be
-nested inside list items, blockquotes, etc.</p></div>
+nested inside list items, blockquotes, etc.</p>
+<p>````</p></div>
             </div>
         </div>
 
