@@ -272,18 +272,13 @@ mkdocs --help
 mkdocs build --help
 ```
 
-## Deploying
+## 部署
 
-The documentation site that you just built only uses static files so you'll be
-able to host it from pretty much anywhere. Simply upload the contents of the
-entire `site` directory to wherever you're hosting your website from and
-you're done. For specific instructions on a number of common hosts, see the
-[Deploying your Docs][deploy] page.
+你刚构建的文档站点只使用了静态文件，因此你几乎可以在任意地方托管它。只需要将 `site` 目录下的所有内容上传到托管网站所在的地方即可。有关一些常见主机的特定说明，请参阅[文档部署][deploy]页面。
 
-## Getting help
+## 帮助
 
-To get help with MkDocs, please use the [discussion group], [GitHub issues] or
-the MkDocs IRC channel `#mkdocs` on freenode.
+要获得有关 MkDocs 的帮助，请使用 [discussion group]，[GitHub issues] 或者 freenode上的MkDocs IRC频道 `#mkdocs` 以此来寻求更多帮助。
 
 [deploy]: user-guide/deploying-your-docs/
 [mkdocs]: user-guide/styling-your-docs/#mkdocs
