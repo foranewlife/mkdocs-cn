@@ -135,11 +135,11 @@
             
             <li class="nav-item" data-level="1"><a href="#_1" class="nav-link">编写文档</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#file-layout" class="nav-link">File layout</a>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">文件存储结构</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#writing-with-markdown" class="nav-link">Writing with Markdown</a>
+            <li class="nav-item" data-level="2"><a href="#markdown" class="nav-link">用 Markdown 写作</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -153,31 +153,24 @@
 <h1 id="_1">编写文档<a class="headerlink" href="#_1" title="Permanent link"></a></h1>
 <p>如何布局和编写Markdown源文件。</p>
 <hr />
-<h2 id="file-layout">File layout<a class="headerlink" href="#file-layout" title="Permanent link"></a></h2>
+<h2 id="_2">文件存储结构<a class="headerlink" href="#_2" title="Permanent link"></a></h2>
+<p>你的源文档应该以常规的 MarkDown 文件形式编写（请参考下面的<a href="#markdown">用 Markdown 写作</a>），并将其放在<a href="../configuration/#docs_dir">文件目录</a>中。默认情况下，这个 <code>docs</code> 目录和 <code>mkdocs.yml</code> 配置文件一起位于项目的顶层。</p>
 <p>Your documentation source should be written as regular Markdown files (see
 <a href="#writing-with-markdown">Writing with Markdown</a> below), and placed in the
 <a href="../configuration/#docs_dir">documentation directory</a>. By default, this directory
 will be named <code>docs</code> and will exist at the top level of your project, alongside
 the <code>mkdocs.yml</code> configuration file.</p>
-<p>The simplest project you can create will look something like this:</p>
+<p>您可以创建的最简单的项目如下所示：</p>
 <pre><code class="language-no-highlight">mkdocs.yml
 docs/
     index.md
 </code></pre>
-<p>By convention your project homepage should be named <code>index.md</code> (see <a href="#index-pages">Index
-pages</a> below for details). Any of the following file
-extensions may be used for your Markdown source files: <code>markdown</code>, <code>mdown</code>,
-<code>mkdn</code>, <code>mkd</code>, <code>md</code>. All Markdown files included in your documentation
-directory will be rendered in the built site regardless of any settings.</p>
+<p>按照惯例，你的项目首页应该被命名为 <code>index.md</code>（有关详细信息，请参见下面的<a href="#_3">索引页面</a>）。以下任何扩展名都可以用于 Markdown 源文件：<code>markdown</code>、 <code>mdown</code>、<code>mkdn</code>、<code>mkd</code>、 <code>md</code>。无论设置如何，文档目录中包含的所有的 Markdown 文件都将呈现在构建的站点中。</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Files and directories with names which begin with a dot (for example:
-<code>.foo.md</code> or <code>.bar/baz.md</code>) are ignored by MkDocs, which matches the
-behavior of most web servers. There is no option to override this
-behavior.</p>
+<p>以点开头的文件和文件夹（例如：<code>.foo.md</code> 或 <code>.bar/baz.md</code>）都会被 Mkdocs 所忽略，这也与大多数 Web 服务器的行为相匹配。没有选项可以替代此行为。</p>
 </div>
-<p>You can also create multi-page documentation, by creating several Markdown
-files:</p>
+<p>你还可以通过创建几个 Markdown 文件的方法来创建多页文档：</p>
 <pre><code class="language-no-highlight">mkdocs.yml
 docs/
     index.md
@@ -209,7 +202,7 @@ nested URLs, like so:</p>
 within the <a href="../configuration/#docs_dir">documentation directory</a> are copied by
 MkDocs to the built site unaltered. See
 <a href="#linking-to-images-and-media">how to link to images and media</a> below for details.</p>
-<h3 id="index-pages">Index pages<a class="headerlink" href="#index-pages" title="Permanent link"></a></h3>
+<h3 id="_3">首页<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
 <p>When a directory is requested, by default, most web servers will return an index
 file (usually named <code>index.html</code>) contained within that directory if one exists.
 For that reason, the homepage in all of the examples above has been named
@@ -279,7 +272,7 @@ While sections may mirror your directory structure, they do not have to.</p>
 included with the built site, however, they will not be linked from the global
 navigation and will not be included in the <code>previous</code> and <code>next</code> links. Such
 pages will be "hidden" unless linked to directly.</p>
-<h2 id="writing-with-markdown">Writing with Markdown<a class="headerlink" href="#writing-with-markdown" title="Permanent link"></a></h2>
+<h2 id="markdown">用 Markdown 写作<a class="headerlink" href="#markdown" title="Permanent link"></a></h2>
 <p>MkDocs pages must be authored in <a href="https://daringfireball.net/projects/markdown/">Markdown</a>, a lightweight markup language
 which results in easy-to-read, easy-to-write plain text documents that can be
 converted to valid HTML documents in a predictable manner.</p>
