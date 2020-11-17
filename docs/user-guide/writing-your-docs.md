@@ -4,7 +4,9 @@
 
 ---
 
-## File layout
+## 文件存储结构
+
+你的源文档应该以常规的 MarkDown 文件形式编写（请参考下面的[用 Markdown 写作](#markdown)），并将其放在[文件目录](configuration.md#docs_dir)中。默认情况下，这个 `docs` 目录和 `mkdocs.yml` 配置文件一起位于项目的顶层。
 
 Your documentation source should be written as regular Markdown files (see
 [Writing with Markdown](#writing-with-markdown) below), and placed in the
@@ -12,7 +14,7 @@ Your documentation source should be written as regular Markdown files (see
 will be named `docs` and will exist at the top level of your project, alongside
 the `mkdocs.yml` configuration file.
 
-The simplest project you can create will look something like this:
+您可以创建的最简单的项目如下所示：
 
 ```no-highlight
 mkdocs.yml
@@ -20,21 +22,15 @@ docs/
     index.md
 ```
 
-By convention your project homepage should be named `index.md` (see [Index
-pages](#index-pages) below for details). Any of the following file
-extensions may be used for your Markdown source files: `markdown`, `mdown`,
-`mkdn`, `mkd`, `md`. All Markdown files included in your documentation
-directory will be rendered in the built site regardless of any settings.
+按照惯例，你的项目首页应该被命名为 `index.md`（有关详细信息，请参见下面的[索引页面](#_3)）。以下任何扩展名都可以用于 Markdown 源文件：`markdown`、 `mdown`、`mkdn`、`mkd`、 `md`。无论设置如何，文档目录中包含的所有的 Markdown 文件都将呈现在构建的站点中。
+
+
 
 !!! note
 
-    Files and directories with names which begin with a dot (for example:
-    `.foo.md` or `.bar/baz.md`) are ignored by MkDocs, which matches the
-    behavior of most web servers. There is no option to override this
-    behavior.
+    以点开头的文件和文件夹（例如：`.foo.md` 或 `.bar/baz.md`）都会被 Mkdocs 所忽略，这也与大多数 Web 服务器的行为相匹配。没有选项可以替代此行为。
 
-You can also create multi-page documentation, by creating several Markdown
-files:
+你还可以通过创建几个 Markdown 文件的方法来创建多页文档：
 
 ```no-highlight
 mkdocs.yml
@@ -79,7 +75,7 @@ within the [documentation directory](configuration.md#docs_dir) are copied by
 MkDocs to the built site unaltered. See
 [how to link to images and media](#linking-to-images-and-media) below for details.
 
-### Index pages
+### 首页
 
 When a directory is requested, by default, most web servers will return an index
 file (usually named `index.html`) contained within that directory if one exists.
@@ -169,7 +165,7 @@ included with the built site, however, they will not be linked from the global
 navigation and will not be included in the `previous` and `next` links. Such
 pages will be "hidden" unless linked to directly.
 
-## Writing with Markdown
+## 用 Markdown 写作
 
 MkDocs pages must be authored in [Markdown][md], a lightweight markup language
 which results in easy-to-read, easy-to-write plain text documents that can be
@@ -530,7 +526,7 @@ after the backticks which informs any syntax highlighters of the language used:
 def fn():
     pass
 ```
-````
+````  
 
 Note that fenced code blocks can not be indented. Therefore, they cannot be
 nested inside list items, blockquotes, etc.
