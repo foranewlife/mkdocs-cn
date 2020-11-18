@@ -40,8 +40,7 @@ docs/
     license.md
 ```
 
-The file layout you use determines the URLs that are used for the generated
-pages. Given the above layout, pages would be generated for the following URLs:
+你使用的文件存储结构确定了用于生成页面的 URL。 根据上述布局，将生成以下 URL 页面：
 
 ```no-highlight
 /
@@ -49,8 +48,7 @@ pages. Given the above layout, pages would be generated for the following URLs:
 /license/
 ```
 
-You can also include your Markdown files in nested directories if that better
-suits your documentation layout.
+如果更适合你的文档存储结构，你还可以将 Markdown 文件包括在嵌套目录中。
 
 ```no-highlight
 docs/
@@ -60,8 +58,7 @@ docs/
     license.md
 ```
 
-Source files inside nested directories will cause pages to be generated with
-nested URLs, like so:
+嵌套目录中的源文件将导致产生 URL 嵌套页面，如下所示：
 
 ```no-highlight
 /
@@ -70,6 +67,8 @@ nested URLs, like so:
 /license/
 ```
 
+MkDocs 会将[文档目录](configuration.md#docs_dir)中未被标识为 Markdown 的文件（通过文件扩展名判断）的所有文件都原样复制到生成的站点中。 有关详情，请参见下面的[如何链接到图像和媒体](#linking-to-images-and-media)。
+
 Any files which are not identified as Markdown files (by their file extension)
 within the [documentation directory](configuration.md#docs_dir) are copied by
 MkDocs to the built site unaltered. See
@@ -77,10 +76,9 @@ MkDocs to the built site unaltered. See
 
 ### 首页
 
-When a directory is requested, by default, most web servers will return an index
-file (usually named `index.html`) contained within that directory if one exists.
-For that reason, the homepage in all of the examples above has been named
-`index.md`, which MkDocs will render to `index.html` when building the site.
+默认情况下，请求网站目录时如果有索引文件的存在，大多数Web服务器将返回该目录中包含的索引文件（通常名为 `index.html`）。因此，上面所有示例中的首页都被命名为 `index.md`，MkDocs 在构建网站时会将其呈现为 `index.html`。
+
+ 
 
 Many repository hosting sites provide special treatment for README files by
 displaying the contents of the README file when browsing the contents of a
