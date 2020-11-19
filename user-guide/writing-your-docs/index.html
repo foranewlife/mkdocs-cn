@@ -202,17 +202,11 @@ MkDocs to the built site unaltered. See
 <a href="#linking-to-images-and-media">how to link to images and media</a> below for details.</p>
 <h3 id="_3">首页<a class="headerlink" href="#_3" title="Permanent link"></a></h3>
 <p>默认情况下，请求网站目录时如果有索引文件的存在，大多数Web服务器将返回该目录中包含的索引文件（通常名为 <code>index.html</code>）。因此，上面所有示例中的首页都被命名为 <code>index.md</code>，MkDocs 在构建网站时会将其呈现为 <code>index.html</code>。</p>
-<p>Many repository hosting sites provide special treatment for README files by
-displaying the contents of the README file when browsing the contents of a
-directory. Therefore, MkDocs will allow you to name your index pages as
-<code>README.md</code> instead of <code>index.md</code>. In that way, when users are browsing your
-source code, the repository host can display the index page of that directory as
-it is a README file. However, when MkDocs renders your site, the file will be
-renamed to <code>index.html</code> so that the server will serve it as a proper index file.</p>
-<p>If both an <code>index.md</code> file and a <code>README.md</code> file are found in the same
-directory, then the <code>index.md</code> file is used and the <code>README.md</code> file is
-ignored.</p>
-<h3 id="configure-pages-and-navigation">Configure Pages and Navigation<a class="headerlink" href="#configure-pages-and-navigation" title="Permanent link"></a></h3>
+<p>许多资源库托管站点在浏览目录内容时通过显示 README 文件的内容来提供对 README 文件的特殊处理。因此，MkDocs 允许您将索引页命名为 <code>README.md</code> 而不是 <code>index.md</code>。这样，当用户浏览你的源代码时，资源托管站点可以显示该目录的索引页，因为它是 README 文件。然而，当MkDocs 渲染你的站点时，该文件将被重命名为 <code>index.html</code>，以便服务器将其作为一个适当的索引文件。</p>
+<p>如果在同一目录中同时找到了 <code>index.md</code> 文件和 <code>README.md</code> 文件，则使用 <code>index.md</code> 文件，并忽略 <code>README.md</code> 文件。</p>
+<h3 id="_4">配置页面和导航<a class="headerlink" href="#_4" title="Permanent link"></a></h3>
+<p><code>mkdocs.yml</code> 文件中的 <a href="../configuration/#nav">nav</a> 配置项定义了全局站点导航菜单中包括的页面以及该菜单的结构。如果未提供导航，将通过<a href="../configuration/#docs_dir">文档目录</a>中的所有的 Markdown 文件来自动创建导航。自动创建的导航配置将始终按文件名的字母数字顺序进行排序（除非索引文件始终始终在子部分中列出）。如果你希望导航菜单的排序方式不同，则需要手动定义导航配置。</p>
+<p>一个最小的导航配置如下所示：</p>
 <p>The <a href="../configuration/#nav">nav</a> configuration setting in your <code>mkdocs.yml</code> file
 defines which pages are included in the global site navigation menu as well as
 the structure of that menu. If not provided, the navigation will be
