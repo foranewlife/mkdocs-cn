@@ -78,21 +78,15 @@ MkDocs to the built site unaltered. See
 
 默认情况下，请求网站目录时如果有索引文件的存在，大多数Web服务器将返回该目录中包含的索引文件（通常名为 `index.html`）。因此，上面所有示例中的首页都被命名为 `index.md`，MkDocs 在构建网站时会将其呈现为 `index.html`。
 
- 
+ 许多资源库托管站点在浏览目录内容时通过显示 README 文件的内容来提供对 README 文件的特殊处理。因此，MkDocs 允许您将索引页命名为 `README.md` 而不是 `index.md`。这样，当用户浏览你的源代码时，资源托管站点可以显示该目录的索引页，因为它是 README 文件。然而，当MkDocs 渲染你的站点时，该文件将被重命名为 `index.html`，以便服务器将其作为一个适当的索引文件。
 
-Many repository hosting sites provide special treatment for README files by
-displaying the contents of the README file when browsing the contents of a
-directory. Therefore, MkDocs will allow you to name your index pages as
-`README.md` instead of `index.md`. In that way, when users are browsing your
-source code, the repository host can display the index page of that directory as
-it is a README file. However, when MkDocs renders your site, the file will be
-renamed to `index.html` so that the server will serve it as a proper index file.
+如果在同一目录中同时找到了 `index.md` 文件和 `README.md` 文件，则使用 `index.md` 文件，并忽略 `README.md` 文件。
 
-If both an `index.md` file and a `README.md` file are found in the same
-directory, then the `index.md` file is used and the `README.md` file is
-ignored.
+### 配置页面和导航
 
-### Configure Pages and Navigation
+`mkdocs.yml` 文件中的 [nav](configuration.md#nav) 配置项定义了全局站点导航菜单中包括的页面以及该菜单的结构。如果未提供导航，将通过[文档目录](configuration.md#docs_dir)中的所有的 Markdown 文件来自动创建导航。自动创建的导航配置将始终按文件名的字母数字顺序进行排序（除非索引文件始终始终在子部分中列出）。如果你希望导航菜单的排序方式不同，则需要手动定义导航配置。
+
+一个最小的导航配置如下所示：
 
 The [nav](configuration.md#nav) configuration setting in your `mkdocs.yml` file
 defines which pages are included in the global site navigation menu as well as
